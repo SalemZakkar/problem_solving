@@ -18,11 +18,6 @@ void getAns(int x , vector<ll> &coins)
             if(i >= coins[j])
             dp[i] = min(dp[i] , dp[i - coins[j]] + 1);
         }
-        for(int i = 1 ; i <= x ; i ++)
-        {
-            cout<<dp[i] << " ";
-        }
-        cout<<endl;
     }
     printf("%lld\n" , (dp[x] >= INT_MAX ? -1 : dp[x]));
 
