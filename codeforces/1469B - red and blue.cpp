@@ -2,13 +2,14 @@
 
 using namespace std;
 
-vector<int> v[2];
+vector<int> v[3];
 
 void init(int n)
 {
-
-    v[0] = vector<int>(n+5,0);
-    v[1] = vector<int>(n+5,0);
+   v[0].clear();
+   v[0].resize(n+5);
+   v[1].clear();
+   v[1].resize(n+5);
 }
 
 int maximum(int n, int f)
@@ -19,7 +20,7 @@ int maximum(int n, int f)
     {
         curr+=v[f][i];
         maxi = max(maxi, curr);
-        curr = max(curr, 0);
+       // curr = max(curr, 0);
     }
     return maxi = max(maxi , 0);
 }
