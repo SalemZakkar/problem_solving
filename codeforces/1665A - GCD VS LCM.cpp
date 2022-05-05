@@ -6,6 +6,7 @@ using ll = long long;
 
 void solve()
 {
+    
 
     int n = 0;
     scanf("%d" , &n);
